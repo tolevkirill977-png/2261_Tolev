@@ -165,6 +165,7 @@ int s = 0;
 for (int *p = x; p < x + 10; ++p) {
         s += *p;
 std::cout << s;
+}
 ```
 
 
