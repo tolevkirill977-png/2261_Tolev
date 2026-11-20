@@ -18,6 +18,23 @@ int main() {
     return 0;
 }
 ```
+#### Ответ:
+<img width="548" height="105" alt="image" src="https://github.com/user-attachments/assets/7a4cc33a-22ce-44cb-bb33-7405f25f3118" />
+
+```cpp
+int bar(int x);
+
+int foo(int x) {
+    return bar(x);
+}
+int bar(int x) {
+    return x+1;
+}
+int main() {
+    foo(0);
+    return 0;
+}
+```
 
 ### Задание 2 **(1)**
 
@@ -39,14 +56,28 @@ int main(void) {
    return 0;
 }
 ```
+#### Ответ:
+```cpp
+#include <iostream>
+void dswap(double& x, double& y) { 
+   double t = x;
+   x = y;
+   y = t;
+}
+int main(void) {
+   double x = 1.5, y = 3.4;
+   dswap(x, y);
+   std::cout << x << " " << y << std::endl;
+   return 0;
+}
+
+```
 
 ### Задание 3 **(3)**
 
 *Известно, что функция* **dosome** *не изменяет значений вектора* **V**.
 *Какие из способов объявления функции является правильным с точки зрения 
 корректности работы программы? В чем разница между этими способами?*
-
-
 
 ```
 void dosome(const vector<int> &V);
@@ -55,7 +86,7 @@ void dosome(const vector<int> V);
 void dosome(vector<int> V);
 ```
 
-*Проверьте в какие из этих функций можно передать константные вектора. ОЛбъясните результат.*
+*Проверьте в какие из этих функций можно передать константные вектора. Объясните результат.*
 ```
 dosome({1, 2, 3});
 ```
